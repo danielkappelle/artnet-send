@@ -24,8 +24,6 @@ int send_udp_packet(char* buf, unsigned int size, char* addr, uint16_t port) {
 		exit(EXIT_FAILURE); 
 	}
 
-  printf("size: %d", sizeof(buf));
-
   if (sendto(sockfd, buf,
     size, 0,
     (struct sockaddr *) &address, sizeof(address)) < 0) {
